@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600,700,800,900|Barlow:300,400,500,600,700,800,900&display=swap");
+
+:root{
+    --background-color : rgb(21, 25, 31);
+    --timer-background : rgb(31, 34, 42);
+    --timer-color : rgb(248, 248, 249);
+    --timer-text : rgb(132, 140, 141);
+    --icon-color : rgb(232, 47, 50);
+}
+body{
+    background: var(--background-color);
+    color: var(--timer-color);
+    margin: 0 ;
+    padding: 0 ;
+    width: 100%;
+    font-family: "Barlow", sans-serif;
+}
+.timer{
+    width: 350px;
+    height: auto;
+    background: var(--timer-background);
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    margin: 20px auto;
+    box-shadow: 6px 6px 20px rgb(7, 7, 7) , -1px -1px 10px rgb(7,7,7);
+    position: relative;
+}
+.timer-header{
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
+}
+.timer-body{
+    padding: 20px 30px;
+    text-align: center;
+    margin: auto;
+}
+.timer-inputs{
+    display: flex;
+    justify-content: space-between;
+}
+.timer-section{
+    display: inline-block;
+    width: 30%;
+    height: auto;
+}
+.timer-section label,input{
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: inherit;
+    color : var(--timer-color);
+    text-align: center;
+}
+.timer-section label{
+    font-size: 20px;
+    padding: 15px 0;
+    text-shadow: 1px 1px 5px rgb(20, 20, 20);    
+}
+.timer-section input{
+    outline: none;
+    font-size: 30px;
+    width: calc(100% - 22px);
+    border: 1px solid rgba(20, 20, 20, 0.7);
+    padding: 10px;
+    box-shadow: inset 10px 10px 30px rgb(20, 20, 20) , inset -10px -10px 30px rgb(20, 20, 20);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+    -moz-appearance: textfield;
+}
+.start-btn{
+    width: 100%;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 20px;
+    background: var(--timer-text);
+    color: var(--background-color);
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin: 30px 0;
+    box-shadow: 0px 5px 10px rgb(7, 7, 7);
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+}
+.start-btn:hover{
+    box-shadow: 1px 8px 10px rgb(7, 7, 7);
+    background: var(--icon-color);
+    color : var(--timer-color);
+}
+.progress{
+    position: relative;
+    left: 10px;
+    bottom: 10px;
+    width: 270px;
+    height: 270px;
+}
+.timer-circle{
+    position: relative;
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: var(--background-color);
+    margin: auto;
+    box-shadow: inset 10px 10px 30px rgb(20, 20, 20) , inset -10px -10px 30px rgb(20, 20, 20);
+    /*box-shadow: 10px 10px 30px rgba(0,0,0,0.2) , -10px -10px 30px rgba(255,255,255,0.7);
+    */
+}
+.timer-inner-circle{
+    background: var(--timer-background);
+    width: 230px;
+    height: 230px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    -ms-border-radius: 150px;
+    -o-border-radius: 150px;
+    margin: auto;
+    position: relative;
+    top: 20px;
+    box-shadow: 10px 10px 30px rgb(20, 20, 20) ,-10px -10px 30px rgb(20, 20, 20);
+    /*box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2) ,                inset -4px -4px 6px -1px rgba(255,255,255,0.7) ,                -0.5px -0.5px 0px rgba(255,255,255,1) ,                0.5px 0.5px 0px rgba(0,0,0,0.15),                0 12px 10px -10px rgba(0,0,0,0.05) ;
+    */z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timer-circle-text{
+    font-size: 36px;
+    color: var(--timer-text)
+}
+svg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotate(-87deg);
+    -webkit-transform: rotate(-87deg);
+    -moz-transform: rotate(-87deg);
+    -ms-transform: rotate(-87deg);
+    -o-transform: rotate(-87deg);
+}
+circle{
+    fill:none ;
+    stroke: var(--icon-color);
+    stroke-width: 17px;
+    stroke-linecap: round;  
+}
+@keyframes countdown {
+    from {
+      stroke-dashoffset: 781px;
+    }
+    to {
+      stroke-dashoffset: 1px;
+    }
+}

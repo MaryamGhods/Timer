@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Timer</title>
+</head>
+<body>
+    <main>
+        <div class="timer">
+            <div class="timer-header">
+                Timer
+            </div>
+            <div class="timer-body">
+                <div class="timer-inputs">
+                    <div class="timer-section">
+                        <label for="hours">Hours</label>
+                        <input type="tel" name="hours" onChange={checkDigits(this)} placeholder="00" min="00" max="99" maxlength="2" pattern="[0-9]{2}">
+                    </div>
+                    <div class="timer-section">
+                        <label for="minutes">Minutes</label>
+                        <input type="tel" name="minutes" onChange={checkDigits(this)} placeholder="00" min="00" max="99" maxlength="2" pattern="[0-9]{2}">
+                    </div>
+                    <div class="timer-section">
+                        <label for="Seconds">Seconds</label>
+                        <input type="tel" name="Seconds" onChange={checkDigits(this)} placeholder="00" min="00" max="99" maxlength="2" pattern="[0-9]{2}">
+                    </div>
+                </div>
+                <button class="start-btn">Start</button>
+                <div class="progress">
+                    <div class="timer-circle">
+                        <div class="timer-inner-circle">
+                            <div class="timer-circle-text">
+                                00 : 00 : 00
+                            </div>
+                        </div>
+                    </div>
+                    <svg height="270" width="270">
+                        <circle cx="135" cy="135" r="125" />
+                    </svg> 
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
