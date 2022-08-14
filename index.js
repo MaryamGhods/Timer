@@ -73,7 +73,8 @@ document.querySelector('.start-btn').addEventListener('click',async()=>{
         if(totalSeconds !== 0){
             document.querySelector('circle').style.strokeDashoffset = 781;
             document.querySelector('circle').style.animationName = "countdown"; 
-            document.querySelector('circle').style.animationDuration = totalSeconds + 1 + 's'; 
+            document.querySelector('circle').style.animationDuration = totalSeconds + 's'; 
+            document.querySelector('circle').style.animationTimingFunction = "linear";
             for (i=totalSeconds ; i>0 ; i--){
                 setTime();
                 await sleep(1000);
